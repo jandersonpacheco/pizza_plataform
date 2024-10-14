@@ -1,0 +1,64 @@
+{
+  "pizzas": [
+    {
+      "id": "1",
+      "coverImg": "https://sgnh.com.br/wp-content/uploads/2021/07/pizza_calabresa.png",
+      "title": "Pizza Calabresa",
+      "description": "Calabresa fateada com cebola.",
+      "price": "R$45,00"
+    },
+    {
+      "id": "2",
+      "coverImg": "https://sgnh.com.br/wp-content/uploads/2021/07/pizza_frango.png",
+      "title": "Pizza Frango com Catupiry",
+      "description": "Frango desfiado com catupiry.",
+      "price": "R$50,00"
+    },
+    {
+      "id": "3",
+      "coverImg": "https://paradisepizzaria.com.br/site/img/produtos/281473_1_g.png",
+      "title": "Pizza Marguerita",
+      "description": "Mussarela, parmesão, manjericão e rodelas de tomate.",
+      "price": "R$50,00"
+    },
+    {
+      "id": "4",
+      "coverImg": "https://paradisepizzaria.com.br/site/img/produtos/281490_1_g.png",
+      "title": "Pizza Portuguesa",
+      "description": "Presunto, ovos, cebola e mussarela.",
+      "price": "R$50,00"
+    },
+    {
+      "id": "522",
+      "coverImg": "https://sgnh.com.br/wp-content/uploads/2021/07/pizza_quatro.png",
+      "title": "Pizza 4 Queijos",
+      "description": "Mussarela, gorgonzola, catupiry original e parmesão",
+      "price": "R$53,00"
+    },
+    {
+      "id": "3218",
+      "title": "Pizza Chocolate com Morango",
+      "description": "sabor chocolate meio amargo com morangos fatiados.",
+      "price": "R$60,00",
+      "coverImg": "https://www.cardapio.donnagulla.com.br/wp-content/uploads/2023/02/chocolate.png"
+    }
+  ],
+  "cart": [
+    {
+      "id": "1",
+      "coverImg": "https://sgnh.com.br/wp-content/uploads/2021/07/pizza_calabresa.png",
+      "title": "Pizza Calabresa",
+      "description": "Calabresa fateada com cebola.",
+      "price": "R$45,00",
+      "cartId": "4d9d66be-484f-4531-a28b-09969f7ddb90",
+      "quantity": "2",
+      "observation": "",
+      "extra": "borda-de-catupiry"
+    }
+  ],
+  "orders": [
+    {
+      "id": "d125"
+    }
+  ]
+}
