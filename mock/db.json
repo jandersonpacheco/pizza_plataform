@@ -5,60 +5,110 @@
       "coverImg": "https://sgnh.com.br/wp-content/uploads/2021/07/pizza_calabresa.png",
       "title": "Pizza Calabresa",
       "description": "Calabresa fateada com cebola.",
-      "price": "R$45,00"
+      "price": "45,00"
     },
     {
       "id": "2",
       "coverImg": "https://sgnh.com.br/wp-content/uploads/2021/07/pizza_frango.png",
       "title": "Pizza Frango com Catupiry",
       "description": "Frango desfiado com catupiry.",
-      "price": "R$50,00"
+      "price": "50,00"
     },
     {
       "id": "3",
       "coverImg": "https://paradisepizzaria.com.br/site/img/produtos/281473_1_g.png",
       "title": "Pizza Marguerita",
       "description": "Mussarela, parmesão, manjericão e rodelas de tomate.",
-      "price": "R$50,00"
+      "price": "50,00"
     },
     {
       "id": "4",
       "coverImg": "https://paradisepizzaria.com.br/site/img/produtos/281490_1_g.png",
       "title": "Pizza Portuguesa",
       "description": "Presunto, ovos, cebola e mussarela.",
-      "price": "R$50,00"
+      "price": "50,00"
     },
     {
       "id": "522",
       "coverImg": "https://sgnh.com.br/wp-content/uploads/2021/07/pizza_quatro.png",
       "title": "Pizza 4 Queijos",
       "description": "Mussarela, gorgonzola, catupiry original e parmesão",
-      "price": "R$53,00"
+      "price": "53,00"
     },
     {
       "id": "3218",
       "title": "Pizza Chocolate com Morango",
       "description": "sabor chocolate meio amargo com morangos fatiados.",
-      "price": "R$60,00",
+      "price": "60,10",
       "coverImg": "https://www.cardapio.donnagulla.com.br/wp-content/uploads/2023/02/chocolate.png"
     }
   ],
-  "cart": [
-    {
-      "id": "1",
-      "coverImg": "https://sgnh.com.br/wp-content/uploads/2021/07/pizza_calabresa.png",
-      "title": "Pizza Calabresa",
-      "description": "Calabresa fateada com cebola.",
-      "price": "R$45,00",
-      "cartId": "4d9d66be-484f-4531-a28b-09969f7ddb90",
-      "quantity": "2",
-      "observation": "",
-      "extra": "borda-de-catupiry"
-    }
-  ],
+  "cart": [],
   "orders": [
     {
-      "id": "d125"
+      "0": {
+        "id": "1",
+        "coverImg": "https://sgnh.com.br/wp-content/uploads/2021/07/pizza_calabresa.png",
+        "title": "Pizza Calabresa",
+        "description": "Calabresa fateada com cebola.",
+        "price": "45,00",
+        "cartId": "819fa12b-2b10-4c1a-9991-71cfa5d3d2e4",
+        "quantity": "3",
+        "observation": "",
+        "extra": "borda-de-catupiry",
+        "finalPrice": 135
+      },
+      "id": "997b",
+      "pickUp": "Retirada"
+    },
+    {
+      "0": {
+        "id": "1",
+        "coverImg": "https://sgnh.com.br/wp-content/uploads/2021/07/pizza_calabresa.png",
+        "title": "Pizza Calabresa",
+        "description": "Calabresa fateada com cebola.",
+        "price": "45,00",
+        "cartId": "61cb707c-56fd-44ec-8164-682a3b487a31",
+        "quantity": "1",
+        "observation": "",
+        "extra": "borda-de-catupiry",
+        "finalPrice": 45
+      },
+      "1": {
+        "id": "3",
+        "coverImg": "https://paradisepizzaria.com.br/site/img/produtos/281473_1_g.png",
+        "title": "Pizza Marguerita",
+        "description": "Mussarela, parmesão, manjericão e rodelas de tomate.",
+        "price": "50,00",
+        "cartId": "7de1c011-685b-403a-bfa4-d5169b10da4e",
+        "quantity": "2",
+        "observation": "",
+        "extra": "sem-borda",
+        "finalPrice": 100
+      },
+      "id": "9be2",
+      "pickUp": "Retirada"
+    },
+    {
+      "0": {
+        "id": "1",
+        "coverImg": "https://sgnh.com.br/wp-content/uploads/2021/07/pizza_calabresa.png",
+        "title": "Pizza Calabresa",
+        "description": "Calabresa fateada com cebola.",
+        "price": "45,00",
+        "cartId": "7e65bfa3-dd9d-41aa-892a-64359f0552d5",
+        "quantity": "2",
+        "observation": "",
+        "extra": "borda-de-catupiry",
+        "finalPrice": 90
+      },
+      "id": "5899",
+      "street": "Rua Ernestina Terraciano Siebeld",
+      "number": "127",
+      "complement": "",
+      "cep": "04434300",
+      "neighborhood": "sc",
+      "cellphone": "11944029465"
     }
   ]
 }

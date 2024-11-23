@@ -27,6 +27,7 @@ const Home = () => {
   function closeModal(){
     setIsOpen(false)
     setSelectedPizza(null)
+    setCounter(1)
   }
 
 
@@ -35,12 +36,16 @@ const Home = () => {
   }
 
   function decrease(){
-    setCounter(counter - 1)
+    if(counter > 1){
+      setCounter(counter - 1)
+    }else{
+      alert('Valor mínimo do pedido é 1')
+    }
   }
 
   useEffect(() =>{
     if(selectedPizza){
-      setFinalPrice(selectedPizza.price * counter)
+      setFinalPrice(parseFloat(selectedPizza.price.replace(",",".")) * counter)
       console.log(finalPrice)
     }
   }, [counter, selectedPizza])
@@ -57,7 +62,8 @@ const Home = () => {
       cartId: uuidv4(),
       quantity,
       observation,
-      extra
+      extra,
+      finalPrice
     }
 
     axios.post('http://localhost:3000/cart', pizzaToAdd)
@@ -66,7 +72,7 @@ const Home = () => {
       closeModal()
       setCartUpdated(!cartUpdated)
     })
-    .catch(err => console.error('Erro ao adicionar pizza:', err))
+    .catch(error => console.error('Erro ao adicionar pizza:', error))
   }
 
   return (
@@ -81,7 +87,7 @@ const Home = () => {
                   <p className={styles.description}>{data.description}</p>
                 </div>
                 <div className={styles.pizzaPrice}>
-                  <h3 className={styles.price}>{data.price}</h3>
+                  <h3 className={styles.price}>R${data.price}</h3>
                 </div>
               </div>
               <div className={styles.pizzaImg}>
@@ -106,14 +112,14 @@ const Home = () => {
                 <p className={styles.modalDescription}>{selectedPizza.description}</p>
               </div>
               <div className={styles.modalPizzaDescription}>
-                <h3 className={styles.modalPrice}>{selectedPizza.price}</h3>
+                <h3 className={styles.modalPrice}>R${selectedPizza.price}</h3>
               </div>
               <form onSubmit={addToCart}>
                 <div className={styles.modalExtraItems}>
+                <input type="radio" className={styles.modalExtraItemsRadio} name="modalExtraItemsRadio" id="sem-borda" value='sem-borda' required/>
                   <label htmlFor="sem-borda">Sem Borda</label>
-                  <input type="radio" className={styles.modalExtraItemsRadio} name="modalExtraItemsRadio" id="sem-borda" value='sem-borda' required/>
-                  <label htmlFor="borda-catupiry">Borda recheada com catupiry</label>
                   <input type="radio" className={styles.modalExtraItemsRadio} name="modalExtraItemsRadio" id="borda-catupiry" value='borda-de-catupiry'/>
+                  <label htmlFor="borda-catupiry">Borda recheada com catupiry</label>
                 </div>
                 <div className={styles.modalObsContainer}>
                   <label htmlFor="observation">Alguma observação?</label>
@@ -123,7 +129,7 @@ const Home = () => {
                   <button type="button" className={styles.modalCartBtnContent} onClick={decrease}>-</button>
                   <input type="number" className={styles.quantity} id='quantity' value={counter} onChange={(e) => setCounter(Number(e.target.value))}/>
                   <button type="button" className={styles.modalCartBtnContent} onClick={increase}>+</button>
-                  <button type="submit" className={styles.modalCartBtnContent} onChange={(e) => setFinalPrice(Number(e.target.value))}>Adicionar ao Carrinho {finalPrice}</button>
+                  <button type="submit" className={styles.modalCartBtnContent} onChange={(e) => setFinalPrice(Number(e.target.value))}>Adicionar ao Carrinho R${finalPrice.toFixed(2).replace(".",",")}</button>
                 </div>
               </form>
             </div>
