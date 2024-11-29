@@ -1,0 +1,57 @@
+.body{
+    background-color: #e5e7eb;
+    color: #374151
+}
+.menuContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin: 10px 20px;
+    margin-bottom: 50px;
+
+}
+.pizzaContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+    border: 1px solid;
+    border-color: #e5e7eb;
+    border-radius: 10px;
+    margin: 8px 0px;
+    background-color: #fff;
+    width: 100%;
+    max-width: 650px;
+    height: 120px;
+    cursor: pointer;
+}
+.coverImg{
+    width: 100px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+.pizzaContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+.title{
+    font-size: 14px;
+    margin-left: 5px;
+}
+.description{
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.price{
+    font-size: 14px;
+    margin-left: 5px;
+    
+}

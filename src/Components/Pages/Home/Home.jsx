@@ -25,8 +25,8 @@ const Home = () => {
   }
 
   function closeModal(){
-    setIsOpen(false)
     setSelectedPizza(null)
+    setIsOpen(false)
     setCounter(1)
   }
 

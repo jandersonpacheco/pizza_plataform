@@ -1,4 +1,4 @@
-import axios from "axios"
+    import axios from "axios"
 import { useEffect, useState } from "react"
 import styles from "../Home/home.module.css"
 import Modal from 'react-modal'
@@ -6,6 +6,7 @@ import Modal from 'react-modal'
 const Cart = () => {
     const [data, setData] = useState([])
     const [modalIsOpen, setIsOpen] = useState(false)
+    const [order, setOrder] = useState(null)
 
     function removeFromCart(id){
         axios.delete(`http://localhost:3000/cart/${id}`)
@@ -24,25 +25,34 @@ const Cart = () => {
             .catch(error => console.error('Erro ao buscar os dados do carrinho:', error))
         }, [data])
 
-    function openModal(){
+    function openModal(cartPizza){
+        setOrder(cartPizza)
         setIsOpen(true)
     }
     
     function closeModal(){
+        setOrder(null)
         setIsOpen(false)
     }
 
-function pickUpOrder(){
+    function finishBtn(){
+        if(data.length > 0){
+            openModal(data)
+        }else{
+            alert('Não há itens no carrinho')
+        }
+    }
+
+    function pickUpOrder(){ 
         const pickUp = 'Retirada'
         const addOrder = {
-            ...data,
+            ...order,
             pickUp
         }
 
-        console.log(addOrder)
-        axios.post('http://localhost:3000/orders', addOrder)
+        axios.post('http://localhost:3000/orders', merged)
         .then((response) => {
-            console.log('Pedido concluído!', response.data)
+            console.log('Pedido concluído!', response.data) 
             closeModal()
         })
         .catch(error => console.error('Erro ao buscar os dados do carrinho', error))
@@ -58,15 +68,16 @@ function pickUpOrder(){
 
 
         function deliveryOrder(event){
-
+            
             const street = event.target.street.value
             const number = event.target.number.value
             const complement = event.target.complement.value
             const cep = event.target.cep.value
             const neighborhood = event.target.neighborhood.value
             const cellphone = event.target.cellphone.value
+
             const addOrder = {
-                ...data,
+                ...order,
                 street,
                 number,
                 complement,
@@ -74,7 +85,11 @@ function pickUpOrder(){
                 neighborhood,
                 cellphone
             }
-            axios.post('http://localhost:3000/orders', addOrder)
+
+            let merged = addOrder.reduce( (prev, next) => prev.concat(next))
+            console.log(merged)
+
+            /*axios.post('http://localhost:3000/orders', merged)
                 .then((response) => {
                     console.log('Pedido concluído!', response.data)
                     closeModal()
@@ -85,9 +100,10 @@ function pickUpOrder(){
                 axios.delete(`http://localhost:3000/cart/${item.id}`)
                     .then(() => {
                         console.log('Carrinho esvaziado!')
+                        alert('Pedido concluído! Sua pedido chegará')
                     })
                     .catch(error => console.error('Erro ao deletar os dados', error))
-            })
+            })*/
         }
 
 
@@ -118,7 +134,7 @@ function pickUpOrder(){
                 </div>
             )))}
             <div className={styles.purchaseContainer}>
-                <button className={styles.purchaseBtn} key={data.id} onClick={() => openModal(data)}>Finalizar Pedido</button> 
+                <button className={styles.purchaseBtn} key={data.id} onClick={() => finishBtn()}>Finalizar Pedido</button> 
             </div>
             <Modal isOpen={modalIsOpen} onRequestClose={closeModal}>
             <div className={styles.modalBtn}>

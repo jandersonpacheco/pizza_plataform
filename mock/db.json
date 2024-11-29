@@ -47,68 +47,14 @@
   "orders": [
     {
       "0": {
-        "id": "1",
-        "coverImg": "https://sgnh.com.br/wp-content/uploads/2021/07/pizza_calabresa.png",
-        "title": "Pizza Calabresa",
-        "description": "Calabresa fateada com cebola.",
-        "price": "45,00",
-        "cartId": "819fa12b-2b10-4c1a-9991-71cfa5d3d2e4",
-        "quantity": "3",
-        "observation": "",
-        "extra": "borda-de-catupiry",
-        "finalPrice": 135
+        "observation": "Teste"
       },
-      "id": "997b",
-      "pickUp": "Retirada"
+      "id": "4688"
     },
     {
-      "0": {
-        "id": "1",
-        "coverImg": "https://sgnh.com.br/wp-content/uploads/2021/07/pizza_calabresa.png",
-        "title": "Pizza Calabresa",
-        "description": "Calabresa fateada com cebola.",
-        "price": "45,00",
-        "cartId": "61cb707c-56fd-44ec-8164-682a3b487a31",
-        "quantity": "1",
-        "observation": "",
-        "extra": "borda-de-catupiry",
-        "finalPrice": 45
-      },
-      "1": {
-        "id": "3",
-        "coverImg": "https://paradisepizzaria.com.br/site/img/produtos/281473_1_g.png",
-        "title": "Pizza Marguerita",
-        "description": "Mussarela, parmesão, manjericão e rodelas de tomate.",
-        "price": "50,00",
-        "cartId": "7de1c011-685b-403a-bfa4-d5169b10da4e",
-        "quantity": "2",
-        "observation": "",
-        "extra": "sem-borda",
-        "finalPrice": 100
-      },
-      "id": "9be2",
+      "id": "77ae",
+      "observation": "Teste",
       "pickUp": "Retirada"
-    },
-    {
-      "0": {
-        "id": "1",
-        "coverImg": "https://sgnh.com.br/wp-content/uploads/2021/07/pizza_calabresa.png",
-        "title": "Pizza Calabresa",
-        "description": "Calabresa fateada com cebola.",
-        "price": "45,00",
-        "cartId": "7e65bfa3-dd9d-41aa-892a-64359f0552d5",
-        "quantity": "2",
-        "observation": "",
-        "extra": "borda-de-catupiry",
-        "finalPrice": 90
-      },
-      "id": "5899",
-      "street": "Rua Ernestina Terraciano Siebeld",
-      "number": "127",
-      "complement": "",
-      "cep": "04434300",
-      "neighborhood": "sc",
-      "cellphone": "11944029465"
     }
   ]
 }
